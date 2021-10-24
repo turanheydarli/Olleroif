@@ -1,0 +1,18 @@
+﻿@model Product
+<section class="buy-grid container">
+	<header class="header">
+		<h1>@Model.Title</h1>
+	</header>
+	<div class="hero-image-wrapper">
+		<img src="~/img/@Model.ImageUrl" class="hero-image-element" alt="@Model.Title">
+	</div>
+	<div class="selection">
+		<button class="btn btn-primary btn-large btn-full">Add to Cart</button>
+	</div>
+	<div class="specs-table">
+		<h4>Description</h4>
+		<div class="specs-table-row">
+			<div class="spec-table-description">@Model.ProductDetail.Description</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,27 @@
+﻿@model Blog
+
+<div class="container">
+
+	<div class="cs-blog-detail">
+		<div class="cs-main-post">
+			<figure><img src="~/img/@Model.ImageUrl"></figure>
+		</div>
+		<div class="cs-post-title">
+			<div class="cs-author">
+				<figure>
+					<a><img width="32" height="32" class="avatar avatar-32 photo" src="~/img/@Model.Employee.ImageUrl" alt=""></a>
+				</figure>
+				<div class="cs-text">
+					<a href="">@Model.Employee.Name</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="cs-post-option-panel">
+			<div class="rich-editor-text">
+				@Html.Raw(Model.BlogDetail.Content)
+			</div>
+		</div>
+
+	</div>
+</div>

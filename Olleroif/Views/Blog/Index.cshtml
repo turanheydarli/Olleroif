@@ -1,0 +1,27 @@
+﻿@model List<Blog>
+
+<div class="container mx-auto">
+	<div class="row pb-5">
+		@foreach (Blog blog in Model)
+		{
+		<a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id" class="col-md-6 col-lg-4" style="cursor: pointer">
+			<div class="item">
+				<div class="img position-relative">
+					<img src="~/img/@blog.ImageUrl" class="img-fluid" alt="">
+					<div class="date rounded bg-light position-absolute py-1 px-2">
+					</div>
+				</div>
+				<div class="text mt-3 text-center px-5">
+					<h5>@blog.Title</h5>
+					<p class="text-black-50">
+						@blog.Content
+					</p>
+				</div>
+			</div>
+		</a>
+		}
+		
+	</div>
+
+</div>
+
